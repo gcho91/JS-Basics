@@ -1,28 +1,52 @@
-//////////////////PROBLEM 1////////////////////
-
-var name = 'Tyler';
-//Create a function called isTyler that accepts name as it's only parameter.
-//If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
-
+// //////////////////PROBLEM 1////////////////////
+//
+// var name = 'Tyler';
+// //Create a function called isTyler that accepts name as it's only parameter.
+// //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
+//
   //Code Here
+  function isTyler(name) {
+    if (name ==="Tyler") {
+      return true;
+    } else {
+      return false;
+    }
+  }
+//
+// //////////////////PROBLEM 2////////////////////
+//
+//
+// //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
+//
+  //
+  // //Code Here
+  var getName = function(){
 
-//////////////////PROBLEM 2////////////////////
+    var theName = prompt("What is your name?");
+
+    if (theName != null) {
+      return theName;
+    }
+  }
+
+//
+//
+//
+// //////////////////PROBLEM 3////////////////////
+//
+//
+//
+// //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
+// //then alerts "Welcome, " plus whatever the users name is.
+//
+//   //Code Here
+  function welcome() {
 
 
-//Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
+    alert( "Welcome, " + getName() );
+  }
 
-
-  //Code Here
-
-
-//////////////////PROBLEM 3////////////////////
-
-
-
-//Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
-//then alerts "Welcome, " plus whatever the users name is.
-
-  //Code Here
+  welcome();
 
 
 //////////////////PROBLEM 4////////////////////
@@ -33,6 +57,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+  //Parameters are temporary variable names within functions. Arguments are values assigned to that temporary variable.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -43,6 +68,9 @@ var name = 'Tyler';
 
 
   //Answer Here
+  //anything that returns false. NaN, null, "", undefined, 0, false
+  //check if true. if it returns false1
+
 
 
 
@@ -53,27 +81,48 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+  function myName(){
+    return "Gloria";
+  }
+
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+var newMyName = myName;
 
-//Now alert the result of invoking newMyName
+ var newMyName = function myName(){
+   return "Gloria";
+ }
+
+// //Now alert the result of invoking newMyName
+alert(newMyName());
 
 
-
-//////////////////PROBLEM 7////////////////////
+// //////////////////PROBLEM 7////////////////////
 
 
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn() {
+
+    return function() {
+      return "Gloria";
+    }
+  }
+
+
+
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+var innerFn =   outerFn();
+
 //Now invoke innerFn.
+
+innerFn();
